@@ -1,10 +1,10 @@
 export class AssetLoader extends EventTarget {
     static COMPLETE: string = 'complete';
 
-    private requestLogFunction: (url: string) => void | undefined;
-    private errorFunction: (url: string) => void | undefined;
-    private progressFunction: (progress: number) => void | undefined;
-    private completeLogFunction: (index: number) => void | undefined;
+    private requestLogFunction: ((url: string) => void) | undefined;
+    private errorFunction: ((url: string) => void) | undefined;
+    private progressFunction: ((progress: number) => void) | undefined;
+    private completeLogFunction: ((index: number) => void) | undefined;
     private fileTotal: number = 0;
     private fileCount: number = 0;
     private headerCount: number = 0;
